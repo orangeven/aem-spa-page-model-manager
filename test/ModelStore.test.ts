@@ -204,6 +204,23 @@ describe('ModelStore ->', () => {
             expect(item[TEST_FIELD]).toEqual(TEST_FIELD_DATA);
         });
 
+        it('should set boolean data', () => {
+            let item: any = modelStore.getData('/content/test/child_page_1/jcr:content/root/child1000');
+
+            item['isvalid'] = false;
+
+            const val = {
+                key: 'child1000',
+                value: item
+            };
+
+            modelStore.setData('/content/test/child_page_1/jcr:content/root/child1000', val);
+
+            item = modelStore.getData('/content/test/child_page_1/jcr:content/root/child1000');
+
+            expect(item['isvalid']).toEqual(false);
+        });
+
         it('should set empty string on removed data', () => {
             let item: any = modelStore.getData('/content/test/child_page_1/jcr:content/root/child1000');
 

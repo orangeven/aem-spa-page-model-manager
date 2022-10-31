@@ -15,6 +15,7 @@ import { Model } from '../../src/Model';
 export interface ResponsiveGridModel extends Model {
     gridClassNames: string;
     columnCount: number;
+    isvalid? : boolean;
 }
 
 export interface PageModel extends Model {

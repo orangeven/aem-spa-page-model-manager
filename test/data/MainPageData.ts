@@ -44,7 +44,8 @@ export const content_test_child_page_1_root_child1001: Model = { ':type': 'test/
 export const content_test_child_page_1_root_child1000: ResponsiveGridModel = {
     'gridClassNames': 'aem-Grid aem-Grid--12 aem-Grid--default--12',
     'columnCount': 12,
-    ':type': 'wcm/foundation/components/responsivegrid'
+    ':type': 'wcm/foundation/components/responsivegrid',
+    'isvalid': true
 };
 
 export const content_test_child_page_1_root: ResponsiveGridModel = {
