@@ -221,6 +221,22 @@ describe('ModelStore ->', () => {
             expect(item['isvalid']).toEqual(false);
         });
 
+        it('should set object data', () => {
+            let item: any = modelStore.getData('/content/test/child_page_1/jcr:content/root/child1000');
+            delete item.image
+
+            const val = {
+                key: 'child1000',
+                value: item
+            };
+
+            modelStore.setData('/content/test/child_page_1/jcr:content/root/child1000', val);
+
+            item = modelStore.getData('/content/test/child_page_1/jcr:content/root/child1000');
+
+            expect(item['image']).toEqual(null);
+        });
+
         it('should set empty string on removed data', () => {
             let item: any = modelStore.getData('/content/test/child_page_1/jcr:content/root/child1000');
 

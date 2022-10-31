@@ -16,6 +16,7 @@ export interface ResponsiveGridModel extends Model {
     gridClassNames: string;
     columnCount: number;
     isvalid? : boolean;
+    image?: object;
 }
 
 export interface PageModel extends Model {
